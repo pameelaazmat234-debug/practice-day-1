@@ -1,47 +1,16 @@
-# Student Class – C++ OOP
+# Student Class – C++
 
-This project demonstrates the use of **constructors, copy constructors, deep copy, dynamic memory allocation, and destructors** in C++.
+A simple C++ OOP project demonstrating **constructors, copy constructors, deep copy, dynamic memory allocation, and destructors**.
 
-## Features
+## Concepts Covered
 
 * Default constructor
 * Parameterized constructor
 * Copy constructor
-* Deep copy using dynamic memory
-* C-style string handling using `strlen()` and `strcpy()`
-* Destructor for releasing dynamically allocated memory
-* Display function to show student information
-
-## Concepts Demonstrated
-
-### 1. Default Constructor
-
-Creates a student with a default roll number and an empty name.
-
-### 2. Parameterized Constructor
-
-Initializes the student's roll number and dynamically allocates memory for the student's name.
-
-### 3. Copy Constructor
-
-Creates a new `Student` object by copying an existing object.
-
-A **deep copy** is used for the dynamically allocated `name` so that each object has its own separate memory.
-
-### 4. Destructor
-
-The destructor releases the dynamically allocated memory using `delete[]`.
-
-## Deep Copy
-
-The copy constructor creates separate memory for the new object's name:
-
-```cpp
-name = new char[strlen(obj.name) + 1];
-strcpy(name, obj.name);
-```
-
-This prevents both objects from pointing to the same memory.
+* Deep copy
+* Dynamic memory allocation using `new`
+* C-style strings using `strlen()` and `strcpy()`
+* Destructor and memory deallocation using `delete[]`
 
 ## Example
 
@@ -53,19 +22,8 @@ s1.display();
 s2.display();
 ```
 
-Both objects contain the same student information, but their `name` values are stored in separate memory locations.
+The copy constructor performs a **deep copy**, giving each object its own dynamically allocated memory for the student's name.
 
-## Technologies Used
+## Purpose
 
-* C++
-* Object-Oriented Programming
-* Dynamic Memory Allocation
-* C-Style Strings
-
-## Learning Goal
-
-The purpose of this project is to understand how C++ manages objects and dynamically allocated memory, especially how **deep copying prevents memory-related problems when pointers are used inside classes**.
-
-
-
-
+This project was created to practice **C++ Object-Oriented Programming and memory management**.
